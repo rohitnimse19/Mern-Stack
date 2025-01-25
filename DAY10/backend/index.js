@@ -6,6 +6,7 @@ import Movie from "./model/MovieModel.js";
 const app = express();
 const PORT = 3000;
 app.use(express.json());
+app.use(cors());
 
 mongoose
     .connect("mongodb://localhost:27017/NextGen")
