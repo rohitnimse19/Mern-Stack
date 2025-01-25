@@ -25,6 +25,20 @@ app.post("/addMovie", async (req, res) => {
         console.log(error);
     }
 });
+app.get("/getMovie", async (req, res) => {
+    try {
+      const movie = await Movie.find({});
+      res.status(200).json(movie);
+      console.log(movie);
+    } catch (err) {
+      console.log(err);
+      res.status(500).send("An error occured while fetching movies");
+    }
+  });
+  app.get("/", (req, res) => {
+    res.send("Hello World!");
+  });
+  
 
 app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`);
