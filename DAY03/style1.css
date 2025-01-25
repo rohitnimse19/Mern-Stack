@@ -1,0 +1,12 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.Movie{
+    display: flex;
+
+}
+.container{
+    display:grid;
+    
+}   

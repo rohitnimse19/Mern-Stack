@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Calculator</title>
+</head>
+<body>
+    <h2>Electricity Bill</h2><br>
+    <label for="units">Enter the Units:</label><br><br>
+    <input type="number" id="units" placeholder="Enter number of units"><br><br>
+    <button onclick="calculateBill()">Calculate Bill</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateBill() {
+            var units = document.getElementById("units").value;
+            var bill = 0;
+
+            if (units > 200) {
+                bill += (units - 200) * 10;
+                units = 200;
+            }
+            if (units > 100) {
+                bill += (units - 100) * 5;
+                units = 100;
+            }
+
+            document.getElementById("result").innerText= "Total Bill Amount :"+bill;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.carousel{
+    width: 1000px;
+    height: 400px;
+    margin-left: 18%;
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.cards-2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.form-control{
+    border-radius: 20px;
+    border-color: pink;
+}
+.btn{
+    border-radius: 20px;
+}
+    
