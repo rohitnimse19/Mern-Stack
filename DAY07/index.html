@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Flag</title>
+    <style>
+        /* The flag's container */
+        .flag {
+            width: 450px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        /* Saffron section */
+        .saffron {
+            height: 33.33%;
+            background-color: #FF9933;
+        }
+
+        /* White section */
+        .white {
+            height: 33.33%;
+            background-color: #FFFFFF;
+            position: relative;
+        }
+
+        /* Green section */
+        .green {
+            height: 33.33%;
+            background-color: #138808;
+        }
+
+        /* Ashoka Chakra */
+        .chakra {
+            width: 50px;
+            height: 50px;
+            background-color: #000080;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid white;
+        }
+
+        /* Chakra spokes */
+        .chakra::before,
+        .chakra::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: white;
+        }
+
+        .chakra::before {
+            width: 2px;
+            height: 20px;
+            transform: translate(-50%, -50%);
+        }
+
+        .chakra::after {
+            width: 20px;
+            height: 2px;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="flag">
+        <div class="saffron"></div>
+        <div class="white">
+            <div class="chakra"></div>
+        </div>
+        <div class="green"></div>
+    </div>
+</body>
+</html>
