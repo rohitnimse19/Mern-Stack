@@ -4,29 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electricity Bill Calculator</title>
+    <style>
+        /* Reset some default styles */
+        body, h2, p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Page background color and text color */
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Main container */
+        .container {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        /* Heading style */
+        h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        /* Input box styling */
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        /* Button styling */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Result text styling */
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        /* Error message styling */
+        .error {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <h2>Electricity Bill</h2><br>
-    <label for="units">Enter the Units:</label><br><br>
-    <input type="number" id="units" placeholder="Enter number of units"><br><br>
-    <button onclick="calculateBill()">Calculate Bill</button>
-    <p id="result"></p>
+    <div class="container">
+        <h2>Electricity Bill Calculator</h2>
+        <label for="units">Enter the Units:</label><br><br>
+        <input type="number" id="units" placeholder="Enter number of units"><br><br>
+        <button onclick="calculateBill()">Calculate Bill</button>
+        <p id="result"></p>
+    </div>
 
     <script>
         function calculateBill() {
             var units = document.getElementById("units").value;
             var bill = 0;
 
+            // Ensure the value entered is a valid number
+            if (units <= 0 || isNaN(units)) {
+                document.getElementById("result").innerText = "Please enter a valid number of units.";
+                document.getElementById("result").classList.add('error');
+                return;
+            } else {
+                document.getElementById("result").classList.remove('error');
+            }
+
+            // Bill calculation logic based on units
             if (units > 200) {
-                bill += (units - 200) * 10;
+                bill += (units - 200) * 10; // 10 per unit for units above 200
                 units = 200;
             }
             if (units > 100) {
-                bill += (units - 100) * 5;
+                bill += (units - 100) * 5; // 5 per unit for units between 100 and 200
                 units = 100;
             }
+            if (units > 0) {
+                bill += units * 2; // 2 per unit for units between 0 and 100
+            }
 
-            document.getElementById("result").innerText= "Total Bill Amount :"+bill;
+            document.getElementById("result").innerText = "Total Bill Amount: ₹" + bill;
         }
     </script>
 </body>

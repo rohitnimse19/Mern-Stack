@@ -3,22 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Info Form</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Styling for the form container */
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Label Styling */
+        label {
+            font-size: 16px;
+            color: #555;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Input fields styling */
+        input[type="text"],
+        input[type="number"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="password"]:focus {
+            border-color: #5c9ded;
+            outline: none;
+        }
+
+        /* Button styling */
+        input[type="button"] {
+            background-color: #5c9ded;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            padding: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="button"]:hover {
+            background-color: #4a8ac0;
+        }
+    </style>
 </head>
 <body>
+
     <form>
         <h1>STUDENT INFO</h1>
-        <label>Name:</label>
-        <input type="text"/>
-        <br><br>
-        <label>ERP No:</label>
-        <input type="number"/>
-        <br><br>
-        <label>Password:</label>
-        <input type="password"/>
-        <br><br>
-        <input type="button" value="sign up">
+        <label for="name">Name:</label>
+        <input type="text" id="name" />
+        
+        <label for="erp">ERP No:</label>
+        <input type="number" id="erp" />
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" />
+        
+        <input type="button" value="Sign Up">
     </form>
-    
+
 </body>
 </html>

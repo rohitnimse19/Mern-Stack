@@ -1,0 +1,14 @@
+.orange{
+    height: 150px;
+    background-color: orangered;
+}
+
+.green{
+    height: 150px;
+    background-color: rgb(27, 179, 27);
+}
+
+.white{
+    display: flex;
+    justify-content: center;
+}

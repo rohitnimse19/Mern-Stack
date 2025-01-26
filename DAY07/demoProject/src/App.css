@@ -1,0 +1,26 @@
+:root{
+  margin-left: 50px;
+}
+
+.main{
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 2px 4px 3px;
+}
+
+.calc{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+input{
+  grid-column: 1/ span 3;
+  border-radius: 5px;
+  border: 1px solid rgb(138, 216, 211);
+}
+
+button{
+  background-color:rgb(204, 247, 244);
+}

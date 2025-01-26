@@ -3,56 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shubhvivah Matrimony Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1, h3, h4 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        h1 {
+            color: #ff5722;
+            font-size: 40px;
+        }
+
+        h3 {
+            color: #2196f3;
+            font-size: 28px;
+        }
+
+        h4 {
+            color: #4caf50;
+            font-size: 20px;
+        }
+
+        form {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            margin-bottom: 15px;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        input[type="button"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="button"]:hover {
+            background-color: #388e3c;
+        }
+    </style>
 </head>
 <body>
-   <h1>Shubhvivah Form...</h1> 
-   <h3>The World's No.1 Matrimony service</h3>
-   <h4>Search by City Profresssion & community</h4>
-   <form>
-    <ul>
-   <li>
-    <label>Full Name:</label><br>
-    <br></li>
-    
-    <input type="text"><br><br>
-    <li><label> of religion</label><br>
-    <br>
-    <input type="text"><br><br>
-    </li>
-    <li><label>Aged</label><br><br>
-    <input type="date"></li><br><br>
-   <li><label>Enter Your Phone No</label><br><br></li>
-   <input type="number"><br><br>
-   <li> <label> Mother Tongue</label></li>
-   <label>Hindi</label>
-   <input type="checkbox">
-   <label>Marathi</label>
-   <input type="checkbox">
-   <label>English</label>
-   <input type="checkbox">
-   <label>tamil</label>
-   <input type="checkbox">
-   <br><br>
-   <li><label>Select Your Gender</label> </li>
-   <label>Male</label>
-   <input type="radio">
-   <label>female</label>
-   <input type="radio"><br><br>
-   <li><label>Qualifications</label></li><br>
-   <input type="text">
- </ul><br>
-  
-  <input type="button" value="Submit">
-  
 
+    <h1>Shubhvivah Matrimony Form</h1>
+    <h3>The World's No.1 Matrimony Service</h3>
+    <h4>Search by City, Profession & Community</h4>
 
+    <form>
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
 
-   
+        <label for="religion">Religion:</label>
+        <input type="text" id="religion" name="religion" placeholder="Enter your religion" required>
 
+        <label for="age">Age:</label>
+        <input type="date" id="age" name="age" required>
 
+        <label for="phone">Phone Number:</label>
+        <input type="number" id="phone" name="phone" placeholder="Enter your phone number" required>
 
+        <div class="checkbox-group">
+            <label>Mother Tongue:</label>
+            <label for="hindi">Hindi</label>
+            <input type="checkbox" id="hindi" name="mother-tongue" value="Hindi">
+            <label for="marathi">Marathi</label>
+            <input type="checkbox" id="marathi" name="mother-tongue" value="Marathi">
+            <label for="english">English</label>
+            <input type="checkbox" id="english" name="mother-tongue" value="English">
+            <label for="tamil">Tamil</label>
+            <input type="checkbox" id="tamil" name="mother-tongue" value="Tamil">
+        </div>
 
-   </form>
+        <div class="radio-group">
+            <label>Gender:</label>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="Female">
+        </div>
+
+        <label for="qualification">Qualification:</label>
+        <input type="text" id="qualification" name="qualification" placeholder="Enter your qualification" required>
+
+        <div class="button-container">
+            <input type="button" value="Submit">
+        </div>
+    </form>
+
 </body>
 </html>
